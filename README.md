@@ -90,8 +90,6 @@ Example:
 - Metal is sometimes confused with Plastic, likely because of reflective surfaces.  
 - Future improvements: more diverse image collection under varied lighting conditions.
 
----
-
 ## How to Run
 
 1. Download the dataset from:
