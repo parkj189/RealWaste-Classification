@@ -28,7 +28,7 @@ We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer 
 - 9 classes:
   - Cardboard, Food Organics, Glass, Metal, Miscellaneous Trash, Paper, Plastic, Textile Trash, Vegetation
 - Imbalanced distribution handled via **weighted CrossEntropyLoss** and **stratified sampling**
-- Images preprocessed to 224×224 and normalized for CNN input
+- Images preprocessed to 224×224 and normalized using ImageNet normalization.
 
 ### Data Augmentation
 To improve generalization:
