@@ -73,8 +73,15 @@ Key techniques:
 > ConvNeXtV2 achieved the best performance, surpassing the baseline and previous studies.
 
 ### Confusion Matrix of ConvNeXtV2
-<img src="images/Matrix_Conv" width="500">
+<img src="images/Matrix_Conv.png" width="500">
 
+## Usage
+
+This project supports image-based waste classification using trained CNN models.
+
+Example:
+- Input: an iamge of waste 
+- Output: predicted category (e.g., Plastic, Metal, Paper)
 ## Error Analysis
 
 - Miscellaneous Trash and Plastic classes are most frequently misclassified due to visual ambiguity.  
@@ -85,7 +92,8 @@ Key techniques:
 
 ## How to Run
 
-1. Install dependencies:
+## Additional Details
 
-```bash
-pip install torch torchvision timm scikit-learn matplotlib
+For detailed methodology, experiments, and analysis, refer to the full report:
+
+📄 [Final Report](docs/final_report.pdf)
