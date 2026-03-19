@@ -69,9 +69,11 @@ Key techniques:
 | DenseNet121 | 90.53% | 90.49% |
 | EfficientNetV2-S | 77.26% | 76.69% |
 <img src="images/bargraph.png" width="500">
+
 > ConvNeXtV2 achieved the best performance, surpassing the baseline and previous studies.
 
----
+### Confusion Matrix of ConvNeXtV2
+<img src="images/Matrix_Conv" width="500">
 
 ## Error Analysis
 
