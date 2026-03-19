@@ -23,7 +23,7 @@ This project aims to improve recycling efficiency by automatically classifying w
 We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer learning** to maximize classification accuracy.
 
 ## Dataset
-This project uses the **RealWaste dataset**, a real world waste classification dataset collected within an authentic landfill environment.
+This project uses the **RealWaste dataset**, a real world waste classification dataset collected from landfill environments.
 
 - Source: https://archive.ics.uci.edu/dataset/908/realwaste
 - 4,752 real-world waste images
@@ -82,8 +82,9 @@ Key techniques:
 This project supports image-based waste classification using trained CNN models.
 
 Example:
-- Input: an iamge of waste 
+- Input: an image of waste 
 - Output: predicted category (e.g., Plastic, Metal, Paper)
+
 ## Error Analysis
 
 - Miscellaneous Trash and Plastic classes are most frequently misclassified due to visual ambiguity.  
