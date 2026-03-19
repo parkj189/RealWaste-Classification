@@ -1,110 +1,74 @@
 # RealWaste Classification
 
-## Overview
-
-Built an end-to-end waste classification system using deep learning to classify real-world waste images into 9 categories.
-The model achieves a peak **F1-score of 95.57%**, outperforming baseline approaches and improving classification reliability under real-world conditions.
-
----
-
-## Demo
-
-![Demo](demo/demo.png)
+**Authors:** Junghoon Park, Sihoon Park  
+**Project:** Automated waste classification using CNNs  
+**Dataset:** RealWaste dataset (9 classes, 4,752 images)
 
 ---
 
-## Problem
+## Project Overview
 
-Improper waste sorting leads to contamination in recycling streams, reducing efficiency and increasing environmental impact.
-This project aims to automate waste classification using computer vision to improve sorting accuracy and reduce human error.
+This project aims to improve recycling efficiency by automatically classifying waste images into nine categories:  
 
----
+- Cardboard  
+- Food Organics  
+- Glass  
+- Metal  
+- Miscellaneous Trash  
+- Paper  
+- Plastic  
+- Textile Trash  
+- Vegetation  
 
-## Approach
-
-### Models
-
-* ConvNeXtV2 (best performing)
-* ResNet50
-* DenseNet121
-* EfficientNetV2
-
-### Key Techniques
-
-* Transfer Learning (ImageNet pre-trained models)
-* Partial Fine-Tuning (last convolution block + classifier)
-* Data Augmentation (flip, rotation, cropping)
-* Class Imbalance Handling (weighted CrossEntropyLoss)
+We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer learning** to maximize classification accuracy while reducing reliance on human labor.
 
 ---
 
-## Dataset
+## Models and Approach
 
-* 4,752 real-world waste images
-* 9 classes:
+We implemented and fine-tuned four pre-trained models:
 
-  * Cardboard, Food Organics, Glass, Metal, Trash, Paper, Plastic, Textile, Vegetation
-* Imbalanced distribution handled via weighted loss and stratified sampling
+| Model | Approach |
+|-------|---------|
+| ResNet50 | Partial fine-tuning of last block + classifier |
+| DenseNet121 | Partial fine-tuning of last block + classifier |
+| ConvNeXtV2 | Partial fine-tuning of last block + classifier |
+| EfficientNetV2-S | Partial fine-tuning of last block + classifier |
+
+Key techniques:
+
+- Transfer learning with pre-trained ImageNet weights  
+- Partial fine-tuning (last conv block + classifier)  
+- Data augmentation (RandomResizedCrop, ColorJitter, flips, rotations)  
+- Weighted CrossEntropyLoss for class imbalance  
+- Optimizer: AdamW with ReduceLROnPlateau scheduler  
 
 ---
 
 ## Results
 
-| Model          | Accuracy | F1 Score   |
-| -------------- | -------- | ---------- |
-| ConvNeXtV2     | 90.95%   | **90.98%** |
-| DenseNet121    | 90.11%   | 90.09%     |
-| ResNet50       | 89.68%   | 89.69%     |
-| EfficientNetV2 | 73.68%   | 73.15%     |
+| Model | Accuracy | F1 Score |
+|-------|---------|----------|
+| ConvNeXtV2 | 95.58% | 95.57% |
+| ResNet50 | 92.84% | 92.86% |
+| DenseNet121 | 90.53% | 90.49% |
+| EfficientNetV2-S | 77.26% | 76.69% |
 
-* Achieved **95.57% peak F1-score during training**
-* Outperformed baseline InceptionV3 model (F1: 90.25%)
-
----
-
-## Key Contributions
-
-* Improved minority class performance using weighted loss and stratified sampling
-* Reduced overfitting via augmentation and learning rate scheduling
-* Designed a modular training pipeline for evaluating multiple architectures
+> ConvNeXtV2 achieved the best performance, surpassing the baseline and previous studies.
 
 ---
 
-## Project Structure
+## Error Analysis
 
-```
-realwaste-classification/
-├── notebooks/        # training experiments
-├── src/              # training & inference scripts
-├── demo/             # demo images
-├── docs/             # report (optional)
-└── requirements.txt
-```
-
----
-
-## Tech Stack
-
-* Python
-* PyTorch
-* NumPy, pandas
-* Matplotlib
+- Miscellaneous Trash and Plastic classes are most frequently misclassified due to visual ambiguity.  
+- Metal is sometimes confused with Plastic, likely because of reflective surfaces.  
+- Future improvements: more diverse image collection under varied lighting conditions.
 
 ---
 
 ## How to Run
 
+1. Install dependencies:
+
 ```bash
-pip install -r requirements.txt
-python src/train.py
-```
-
----
-
-## Future Work
-
-* Deploy as a web application for real-time classification
-* Improve generalization with larger datasets
-* Explore transformer-based models (e.g., ViT)
-
----
+pip install torch torchvision timm scikit-learn matplotlib
