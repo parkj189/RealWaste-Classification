@@ -36,7 +36,7 @@ To improve generalization:
 - Random rotations
 - RandomResizedCrop (scale 0.75–1.0)
 - ColorJitter (brightness/contrast/saturation/hue)
-<img src="images/augmentation_sample" width="500">
+<img src="images/augmentation_sample.png" width="500">
 ---
 
 ## Models and Approach
