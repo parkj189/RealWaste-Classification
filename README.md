@@ -22,6 +22,21 @@ This project aims to improve recycling efficiency by automatically classifying w
 
 We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer learning** to maximize classification accuracy while reducing reliance on human labor.
 
+## Dataset
+
+- 4,752 real-world waste images
+- 9 classes:
+  - Cardboard, Food Organics, Glass, Metal, Miscellaneous Trash, Paper, Plastic, Textile Trash, Vegetation
+- Imbalanced distribution handled via **weighted CrossEntropyLoss** and **stratified sampling**
+- Images preprocessed to 224×224 and normalized for CNN input
+
+### Data Augmentation
+To improve generalization:
+- Random horizontal/vertical flips
+- Random rotations
+- RandomResizedCrop (scale 0.75–1.0)
+- ColorJitter (brightness/contrast/saturation/hue)
+
 ---
 
 ## Models and Approach
