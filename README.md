@@ -37,7 +37,7 @@ To improve generalization:
 - RandomResizedCrop (scale 0.75–1.0)
 - ColorJitter (brightness/contrast/saturation/hue)
 <img src="images/augmentation_sample.png" width="500">
----
+
 
 ## Models and Approach
 
@@ -68,7 +68,7 @@ Key techniques:
 | ResNet50 | 92.84% | 92.86% |
 | DenseNet121 | 90.53% | 90.49% |
 | EfficientNetV2-S | 77.26% | 76.69% |
-
+<img src="images/bargraph.png" width="500">
 > ConvNeXtV2 achieved the best performance, surpassing the baseline and previous studies.
 
 ---
