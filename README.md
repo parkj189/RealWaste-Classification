@@ -96,4 +96,4 @@ Example:
 
 For detailed methodology, experiments, and analysis, refer to the full report:
 
-📄 [Final Report](docs/final_report.pdf)
+📄 [Final Report](docs/Final_Project.pdf)
