@@ -96,9 +96,7 @@ Example:
 https://archive.ics.uci.edu/dataset/908/realwaste
 
 2. Place the dataset in the following directory structure (relative to the notebook):
-
-Dataset/
-  └── realwaste/
+Dataset/realwaste/
    
 3. Open and run the Jupyter notebook
 
