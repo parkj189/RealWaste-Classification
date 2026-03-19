@@ -94,6 +94,17 @@ Example:
 
 ## How to Run
 
+1. Download the dataset from:
+https://archive.ics.uci.edu/dataset/908/realwaste
+
+2. Place the dataset in the following directory structure (relative to the notebook):
+
+Dataset/
+  └── realwaste/
+   
+3. Open and run the Jupyter notebook
+
+
 ## Additional Details
 
 For detailed methodology, experiments, and analysis, refer to the full report:
