@@ -23,7 +23,9 @@ This project aims to improve recycling efficiency by automatically classifying w
 We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer learning** to maximize classification accuracy.
 
 ## Dataset
+This project uses the **RealWaste dataset**, a real world waste classification dataset collected within an authentic landfill environment.
 
+- Source: https://archive.ics.uci.edu/dataset/908/realwaste
 - 4,752 real-world waste images
 - 9 classes:
   - Cardboard, Food Organics, Glass, Metal, Miscellaneous Trash, Paper, Plastic, Textile Trash, Vegetation
