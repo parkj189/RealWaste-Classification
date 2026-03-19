@@ -20,7 +20,7 @@ This project aims to improve recycling efficiency by automatically classifying w
 - Textile Trash  
 - Vegetation  
 
-We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer learning** to maximize classification accuracy while reducing reliance on human labor.
+We leverage **pre-trained Convolutional Neural Networks (CNNs)** and **transfer learning** to maximize classification accuracy.
 
 ## Dataset
 
